@@ -1,17 +1,22 @@
 'use strict';
-const weekdays = ['mon','tue','wed','thu','fri','sat','sun']
-const openingHours = {thu: {
-  [weekdays[3]]:{open: 12,
-  close: 22,}
-},[weekdays[4]]:{
-  fri: {
-    open: 11,
-    close: 23,}
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+const openingHours = {
+  thu: {
+    [weekdays[3]]: {
+      open: 12,
+      close: 22,
+    }
+  }, [weekdays[4]]: {
+    fri: {
+      open: 11,
+      close: 23,
+    }
   },
   sat: {
     open: 0, // Open 24 hours
     close: 24,
-  }}
+  }
+}
 // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
@@ -23,16 +28,16 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  openingHours: openingHours ,
-  order (starterIndex, mainIndex) {
+  openingHours: openingHours,
+  order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[this.mainIndex]]
   },
 
-  orderPasta (ing1, ing2, ing3) {
+  orderPasta(ing1, ing2, ing3) {
     console.log(`Here is your delicious pasta with ${ing1},${ing2} and ${ing3}`)
   }
 
-  , orderPizza (mainIngredient, ...otherIngredients) {
+  , orderPizza(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient)
     console.log(otherIngredients)
   }
@@ -308,3 +313,52 @@ const openingHours = {
 //Optional chaining
 
 console.log(restaurant.openingHours.mon)
+
+if (restaurant.openingHours ** restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open)
+//Se a propriedade estiver antes do ponto de interrogação a propriedade open será lida
+console.log(restaurant.openingHours.mon?.open)
+// Se openingHours nem existir a propriedade monday nao sera lida
+console.log(restaurant.openingHours?.mon?.open)
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+for (const days of day) {
+  console.log(day)
+  const open = restaurant.openingHours?.[day]?.open ?? 'closed';
+  console.log(`On ${day}, we open at ${open}`)
+}
+
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist')
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist')
+const users = [{ name: 'Jonas', email: 'hello@jonas.io' }]
+if (users.length > 0) console.log(users[0].name)
+console.log(users[0].name ?? 'User array empty')
+const properties = Object.keys(openingHours)
+let openStr = `We are open on ${properties.length}`
+
+for (const day of Object.keys(openingHours)) {
+  openStr += `${day}.`
+}
+
+const values = Object.values(openingHours)
+
+Object.entries(openingHours)
+for (const [key, { open, close }] of entries) {
+  console.log(entries)
+  console.log(`On ${key} we open at ${open} and close at ${close}`)
+}
+// 1
+for (conts[i, player] of game.scored.entries()) {
+  console.log(`Goal ${i + 1}: ${player}`)
+}
+// 2
+let average = 0;
+for (const odd of Object.values(game.odds))
+  average += odd
+average /= Object.values(game.odds)
+console.log(average)
+
+// 3
+// print the team and the odd
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === 'x' ? 'dram' : `victory ${game[key]}`
+  console.log(`Odd of ${teamStr}${odd}`)
+}
