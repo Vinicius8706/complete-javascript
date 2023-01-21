@@ -62,7 +62,7 @@ const jessica = {
   firstName: 'Jessica',
   lastName: 'Williams',
   age: 27,
-  family:['Alice','Bob']
+  family: ['Alice', 'Bob']
 }
 
 const marriedJessica = jessica
@@ -73,9 +73,49 @@ console.log('After marriage', marriedJessica)
 //merge two objects
 const jessicaCopy = Object.assign({}, jessica2)
 jessicaCopy.lastName = 'Davis'
-console.log('Before marriage:' ,jessica2)
-console.log('After marriage:' ,jessicaCopy)
+console.log('Before marriage:', jessica2)
+console.log('After marriage:', jessicaCopy)
 
 jessicaCopy.family.push('Mary')
 jessicaCopy.family.push('John')
 
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
