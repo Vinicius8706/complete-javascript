@@ -362,3 +362,7 @@ for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === 'x' ? 'dram' : `victory ${game[key]}`
   console.log(`Odd of ${teamStr}${odd}`)
 }
+
+const ordersSet = new SEt(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
+console.log(new Set('Jonas'))
+
