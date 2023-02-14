@@ -363,6 +363,18 @@ for (const [team, odd] of Object.entries(game.odds)) {
   console.log(`Odd of ${teamStr}${odd}`)
 }
 
-const ordersSet = new SEt(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
+const ordersSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta', 'Pizza']);
 console.log(new Set('Jonas'))
+console.log(orderSet.size)
+console.log(ordersSet.has('Pizza'))
+console.log(ordersSet.has('Bread'))
+ordersSet.add("Garlid Bread")
+ordersSet.delete("Risotto")
+// console.log(ordersSet[0])
+for(const order of ordersSet) console.log(order)
+
+const staff = ['Waiter','Chef','Waiter','Manager','Chef','Waiter']
+const staffUnique =[ ...new Set(staff)] //spread operator that end up with a new array
+console.log(staffUnique)
+console.log(new Set(['Waiter','Chef','Waiter','Manager','Chef','Waiter']))
 
