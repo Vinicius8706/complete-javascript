@@ -373,8 +373,12 @@ ordersSet.delete("Risotto")
 // console.log(ordersSet[0])
 for(const order of ordersSet) console.log(order)
 
-const staff = ['Waiter','Chef','Waiter','Manager','Chef','Waiter']
-const staffUnique =[ ...new Set(staff)] //spread operator that end up with a new array
-console.log(staffUnique)
 console.log(new Set(['Waiter','Chef','Waiter','Manager','Chef','Waiter']))
-
+console.log(new Set(['Waiter','Chef','Waiter','Manager','Chef','Waiter']).size)
+console.log(new Set('jonasschmedtmann').size)
+// Mapa é uma estrudtura de dados que podemos usar para mapear valores para chaves
+const rest = new Map();
+rest.set('name','Classe Italiano')
+console.log(rest.set(2,'Lisbon,Portugal'))
+rest.set('categories',['Organic','Italian','Pizzeria','Vegetarian']).set('open',11).set('close',23).set(true,'We are open :D')
+rest.get('name')
