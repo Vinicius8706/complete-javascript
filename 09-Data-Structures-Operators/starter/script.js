@@ -371,14 +371,18 @@ console.log(ordersSet.has('Bread'))
 ordersSet.add("Garlid Bread")
 ordersSet.delete("Risotto")
 // console.log(ordersSet[0])
-for(const order of ordersSet) console.log(order)
+for (const order of ordersSet) console.log(order)
 
-console.log(new Set(['Waiter','Chef','Waiter','Manager','Chef','Waiter']))
-console.log(new Set(['Waiter','Chef','Waiter','Manager','Chef','Waiter']).size)
+console.log(new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']))
+console.log(new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size)
 console.log(new Set('jonasschmedtmann').size)
 // Mapa é uma estrudtura de dados que podemos usar para mapear valores para chaves
 const rest = new Map();
-rest.set('name','Classe Italiano')
-console.log(rest.set(2,'Lisbon,Portugal'))
-rest.set('categories',['Organic','Italian','Pizzeria','Vegetarian']).set('open',11).set('close',23).set(true,'We are open :D')
+rest.set('name', 'Classe Italiano')
+console.log(rest.set(2, 'Lisbon,Portugal'))
+rest.set('categories', ['Organic', 'Italian', 'Pizzeria', 'Vegetarian']).set('open', 11).set('close', 23).set(true, 'We are open :D')
 rest.get('name')
+console.log(rest.get(1))
+rest.get(time > rest.get('open') && time < rest.get('close'))
+
+const time = 21;
