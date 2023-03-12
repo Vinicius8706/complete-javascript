@@ -430,14 +430,14 @@ for (const [key, value] of question) {
   if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
 }
 
-const answer = Number(prompt('Your answer'))
-question.get(question.get('correct') === answer)
+const answer = Number(prompt('Your answer'));
+question.get(question.get('correct') === answer);
 
-console.log([...question])
+console.log([...question]);
 
-console.log(question.entries())
-console.log(question.keys())
-console.log(question.values())
+console.log(question.entries());
+console.log(question.keys());
+console.log(question.values());
 
 ///////////////////////////////////////
 // Coding Challenge #3
@@ -468,12 +468,31 @@ const gameEvents = new Map([
   [92, '🔶 Yellow card'],
 ]);
 
-const events = [...new Set(gameEvents.values())]
+const events = [...new Set(gameEvents.values())];
 //2
-gameEvents.delete(64)
+gameEvents.delete(64);
 
 //3
-console.log(`An event happened, every ${90/gameEvents.size} minutes`)
 
-const time = [...gameEvents.keys()]
-console.log(time)
+const time = [...gameEvents.keys()];
+console.log(`An event happened, every ${time / gameEvents.size} minutes`);
+console.log(time);
+
+for (const [min, event] of gameEvents) {
+  const half = min <= 45? 'FIRST' : 'SECOND';
+console.log(`[HALF] ${min}: ${event}`)
+}
+
+//Working with strings
+
+const airplane = 'TAP Air Portugal'
+const plane = 'A320'
+
+console.log(plane[0])
+console.log(plane[1])
+console.log(plane[2])
+console.log('B737'[0])
+console.log(airline.length)
+console.log('B737'.length)
+console.log(airling.indexOf('r'))
+console.log(airling.lastIndexOf('r'))
