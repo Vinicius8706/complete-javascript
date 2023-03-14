@@ -479,8 +479,8 @@ console.log(`An event happened, every ${time / gameEvents.size} minutes`);
 console.log(time);
 
 for (const [min, event] of gameEvents) {
-  const half = min <= 45? 'FIRST' : 'SECOND';
-console.log(`[HALF] ${min}: ${event}`)
+  const half = min <= 45 ? 'FIRST' : 'SECOND';
+  console.log(`[HALF] ${min}: ${event}`)
 }
 
 //Working with strings
@@ -496,3 +496,23 @@ console.log(airline.length)
 console.log('B737'.length)
 console.log(airling.indexOf('r'))
 console.log(airling.lastIndexOf('r'))
+console.log(airline.indexOf('portugal'))
+console.log(airline.slice(4))
+
+console.log(airline.slice(4, 7))
+console.log(airline.slice(airline.lastIndexOf(' ')))
+
+console.log(airline.slice(-2))
+//started at position one and cuts off the last character
+console.log(airline.slice(1, -1))
+
+const checkMiddleSeat = function (seat) {
+  //B and E are middle seats
+  const s = seat.slice(-1)
+  if (s === 'B' || s === 'E') {
+    console.log('You got the middle seat')
+  }
+}
+checkMiddleSeat('11B')
+checkMiddleSeat('23C')
+checkMiddleSeat('3E')
