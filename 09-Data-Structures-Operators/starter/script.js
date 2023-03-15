@@ -509,10 +509,44 @@ console.log(airline.slice(1, -1))
 const checkMiddleSeat = function (seat) {
   //B and E are middle seats
   const s = seat.slice(-1)
-  if (s === 'B' || s === 'E') {
-    console.log('You got the middle seat')
-  }
+  if (s === 'B' || s === 'E') console.log('You got the middle seat')
+  else console.log('You got lucky')
+
 }
 checkMiddleSeat('11B')
 checkMiddleSeat('23C')
 checkMiddleSeat('3E')
+
+console.log(new String('jonas'))
+console.log(typeof new String('jonas'))
+
+console.log(typeof new String('jonas').slice(1))
+
+//Working with strings
+
+console.log(airline.toLowerCase())
+console.log(airline.toUpperCase());
+
+const passenger = 'jOnAs'
+const passengerLower = passenger.toLowerCase()
+
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower[1].slice(1)
+console.log(passengerCorrect)
+
+//Comparing emails
+
+const email =  'hello@jonas.io';
+const loginEmail = '   Hello@Jonas.Io  \n'
+
+const lowerEmail = loginEmail.toLowerCase()
+const trimmedEmail = lowerEmail.trim()
+console.log(trimmedEmail)
+const normalizedEmail  = loginEmail.toLowerCase()
+console.log(normalizedEmail)
+console.log(email === normalizedEmail)
+
+
+//replacing
+const priceGB = '288,97E'
+
+const priceUS = priceGB.replace('E','$')
