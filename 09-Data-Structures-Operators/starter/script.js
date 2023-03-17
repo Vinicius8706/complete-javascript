@@ -661,6 +661,17 @@ Afterwards, test with your own test data!
 GOOD LUCK 😀
 */
 
-/*
+
 document.body.append(document.createElement('textarea'));
 document.body.append(document.createElement('button'));
+document.querySelector('button').addEventListener('click',function(){
+  const text =document.querySelector('textarea').value
+  const rows = text.split("\n")
+  console.log(rows)
+
+  for(const row of rows){
+    row.toLowerCase().trim().split('_')
+    const output = `${first}${second[0],second[0].replace(second)}`
+    console.log(output)
+  }
+})
