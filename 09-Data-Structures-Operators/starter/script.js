@@ -600,6 +600,6 @@ capitalizeName('jonas schmedtamnn')
 
 const message = 'Go to gate 23'
 
-console.log(message.padStart(25,"+"))
+console.log(message.padStart(25,"+").padEnd(30,"+"))
 
-console.log('Jonas'.padStart(25,"+"))
+console.log('Jonas'.padStart(20,"+").padEnd(30,"+"))
