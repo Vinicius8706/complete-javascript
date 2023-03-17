@@ -550,3 +550,17 @@ console.log(email === normalizedEmail)
 const priceGB = '288,97E'
 
 const priceUS = priceGB.replace('E','$')
+
+const announcement = "All passengers come to boarding door 23. Boarding door 23"
+
+console.log(announcement.replace("door"),'gate')
+console.log(announcement.replaceAll(/door/g,"gate"))
+
+const plane = 'A32neo'
+console.log(plane.includes('A320'))
+console.log(plane.includes('Boeing'))
+console.log(plane.includes('Air'))
+
+if(plane.startsWith("Airbus") && plane.endsWith(neo)){
+  console.log("Part of the NEW Airbus family")
+}
