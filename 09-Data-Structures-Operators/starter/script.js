@@ -591,7 +591,7 @@ const capitalizeName = function (name) {
   const names = name.split(" ")
   const namesUpper = []
   for (const n of names) {
-    namesUpper.push(n.replace[0],n[0].toUpperCase)
+    namesUpper.push(n.replace[0], n[0].toUpperCase)
   }
 }
 
@@ -600,14 +600,14 @@ capitalizeName('jonas schmedtamnn')
 
 const message = 'Go to gate 23'
 
-console.log(message.padStart(25,"+").padEnd(30,"+"))
+console.log(message.padStart(25, "+").padEnd(30, "+"))
 
-console.log('Jonas'.padStart(20,"+").padEnd(30,"+"))
+console.log('Jonas'.padStart(20, "+").padEnd(30, "+"))
 
-const maskCreditCard = function(number){
-  const str = number +  "";
+const maskCreditCard = function (number) {
+  const str = number + "";
   const last = str.slice(-4)
-  return last.padStart(str.length,"*")
+  return last.padStart(str.length, "*")
 }
 
 console.log(maskCreditCard(4333230849234890))
@@ -618,7 +618,7 @@ maskCreditCard('3294i38901123908')
 const message2 = 'Bad weather... All Departues Delayed...'
 console.log(message2.repeat(5))
 
-const placesInLine = function(n){
+const placesInLine = function (n) {
   console.log(`There are ${n} planes in line ${'🤷‍♀️'.repeat(n)}`)
 
 
@@ -664,15 +664,15 @@ GOOD LUCK 😀
 
 document.body.append(document.createElement('textarea'));
 document.body.append(document.createElement('button'));
-document.querySelector('button').addEventListener('click',function(){
-  const text =document.querySelector('textarea').value
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value
   const rows = text.split("\n")
   console.log(rows)
 
-  for(const [i,row] of rows){
+  for (const [i, row] of rows) {
     row.toLowerCase().trim().split('_')
-    const output = `${first}${second.replace(second[0],second[0].toUpperCase())}`
-    console.log(`${output.padEnd(20)}${'✅'.repeat(i+1)})`)
+    const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`
+    console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)})`)
   }
 })
 
@@ -689,8 +689,8 @@ const flights =
 //            Departure from FAO to LIS (12h30)
 
 console.log(flights.split('+'))
-const getCode = str => str.slice(0,3).toUpperCase()
-for(const flight of flight){
-  const [type,from,to,time] = flight.split(';')
-const output = `${type.startsWith("_Deleayed") ? '🔴' : ''} ${type.replaceAll('_',' ')} ${getCode(to)} ${to} ${time.replace(':','h')}.padStart(36)`
+const getCode = str => str.slice(0, 3).toUpperCase()
+for (const flight of flight) {
+  const [type, from, to, time] = flight.split(';')
+  const output = `${type.startsWith("_Deleayed") ? '🔴' : ''} ${type.replaceAll('_', ' ')} ${getCode(to)} ${to} ${time.replace(':', 'h')}`.padStart(36)
 }
