@@ -22,15 +22,23 @@ createBooking('LH123');
 
 const flight = 'LH234';
 const vinicius = { name: 'Vinicius Farias Silva', passport: 2123479284 };
-const checkIn = function(flighNum,passenger) {
+const checkIn = function (flighNum, passenger) {
   flighNum = 'LH999';
   passenger.name = 'Mr. ' + passenger.name;
 
-  if(passenger.passport === 2123479284) {
+  if (passenger.passport === 2123479284) {
     alert('Check in');
   } else {
     alert('Wrong passport!');
   }
 }
+
+const newPassport = function (person) {
+  person.passport = Math.trunc(Math.random() * 10000000000);
+}
+
+newPassport(vinicius);
+//alterando o valor do passport, o checkIn não vai funcionar, pois o valor do passport não é mais o mesmo
+checkIn(flight, vinicius);
 
 checkIn(flight, vinicius);
