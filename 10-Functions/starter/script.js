@@ -42,3 +42,18 @@ newPassport(vinicius);
 checkIn(flight, vinicius);
 
 checkIn(flight, vinicius);
+
+// First class vs high-order functions
+
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase()
+}
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(' ')
+  return [first.toUpperCase(), ...others].join(' ')
+}
+
+const transformer = function(str,fn){
+  
+}
