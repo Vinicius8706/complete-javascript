@@ -64,4 +64,37 @@ const transformer = function (str, fn) {
 transformer('Javascript is the best!', upperFirstWord)
 transformer('Javascript is the best!', oneWord)
 
+document.body.addEventListener('click', high5)
+['jonas', 'martha', 'adam'].forEach(high5)
 
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`)
+  }
+}
+const greeterHey = greet('Hey')
+greeterHey("jonas")
+greeterHey("Steven")
+greet("hello")('Jonas')
+
+const greetArr = (greeting) => name => console.log(`${greeting} ${name}`)
+
+const lufhansa = {
+  airline: 'Lufhansa',
+  iataCode: 'LH',
+  bookings:[],
+  book(flightNumber,name){
+    console.log(`${name} booked a set on ${this.airline}${flightNumber}`)
+  this.bookings({flight:`${this.iataCode}${flightNumber}`,name
+})
+  }
+}
+
+lufhansa.book(239,'Vinicius Farias')
+lufhansa.book(635,'John Smith')
+
+const eurowings = {
+  name: 'Eurowings',
+  iataCode: 'EW',
+  bookings: []
+}
