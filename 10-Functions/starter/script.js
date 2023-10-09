@@ -24,3 +24,26 @@ const book = lufhansa.book;
 
 book.call(eurowings,23,'Sara Williams')
 console.log(eurowings)
+
+book.call(lufhansa,239,'Mary Cooper')
+console.log(lufhansa)
+
+const swiss = {
+    name: 'Swiss Air Lines',
+    iataCode:'LX',
+    bookings:[]
+}
+
+book.call(swiss,583,'Mary Cooper')
+console.log(swiss)
+
+const flightData = [583,'George Cooper']
+
+book.apply(swiss,flightData)
+
+book.call(swiss,...flightData)
+
+//Bind method
+
+
+book.bind(eurowings)
